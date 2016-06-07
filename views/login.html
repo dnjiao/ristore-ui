@@ -1,0 +1,14 @@
+<div class="container" ng-controller="loginCtrl">
+    <div class="card card-container">
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin" ng-submit="authenticate()">
+            <input type="text" id="username" class="form-control" ng-model="username" placeholder="username" required autofocus>
+            <input type="password" id="password" autocomplete="new-password" class="form-control" ng-model="password" placeholder="password" required>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            <div  ng-show="!authenticated" class="bad-credentials">
+				<p>Invalid username and/or password!</p>
+			</div>
+        </form>
+     </div>
+</div>
