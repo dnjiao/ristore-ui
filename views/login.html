@@ -6,8 +6,8 @@
             <input type="text" id="username" class="form-control" ng-model="username" placeholder="username" required autofocus>
             <input type="password" id="password" autocomplete="new-password" class="form-control" ng-model="password" placeholder="password" required>
             <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-            <div  ng-show="!authenticated" class="bad-credentials">
-				<p>Invalid username and/or password!</p>
+            <div  ng-if="login_error" class="bad-credentials">
+				<p>{{login_error}}</p>
 			</div>
         </form>
      </div>

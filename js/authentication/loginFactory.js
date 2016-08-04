@@ -5,13 +5,14 @@ ristoreApp
 		var service = {};
 
 		service.login = function(username, password, callback) {
-			var credentials = "username="+username+"&password="+password;
-	        var config = {
-	        	headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-	      	}
 
-	      	$http.post(LOGIN_URL, credentials, config)
-                .then(function(response) {
+            $http({
+                method: 'POST',
+                url: LOGIN_URL,
+                data: "username=" + username + "&password=" + encodeURIComponent(password) +
+                "&client_id=ristoreclient&client_secret=ristoresecret&grant_type=password",
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).then(function(response) {
                     callback(response);
                 });
 		};

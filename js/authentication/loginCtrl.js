@@ -6,7 +6,8 @@ ristoreApp.controller("loginCtrl",
 			// reset login status
 			loginFactory.clearCredentials();
 		})();
-		$rootScope.authenticated = true;
+		$rootScope.authenticated = false;
+		$scope.login_error = false;
 		$scope.authenticate = function() {
 			loginFactory.login($scope.username, $scope.password, function(response) {
 				if (response.status == 200) {
@@ -19,6 +20,7 @@ ristoreApp.controller("loginCtrl",
 				} else {
 					$window.localStorage.removeItem("access_token");
 					$rootScope.authenticated = false;
+					$scope.login_error = 'Invalid credentials!';
 					$location.path('/login');
 				}
 			});

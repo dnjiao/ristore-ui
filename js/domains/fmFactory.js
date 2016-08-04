@@ -10,8 +10,10 @@ ristoreApp.factory("fmFactory", ['$http',
         service.getAll = function () {
             var url = SERVER + "/ristore/foundtion/";
             return $http({
+                headers: {'Authorization': 'Bearer ' + $window.localStorage.getItem("access_token")},
                 url: url,
-                method: 'GET'
+                method: 'GET',
+                crossOrigin: true
             })
         }
 

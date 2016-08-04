@@ -1,7 +1,8 @@
 var ristoreApp = angular.module('ristoreApp', ['ngRoute', 'ngCookies']);
 
-var SERVER = 'http://localhost:8080';
-var LOGIN_URL = SERVER+"/login";
+//var SERVER = 'http://localhost:8080/ristoreService';
+var SERVER = 'http://rcdrljboss01a:9880/ristoreService'
+var LOGIN_URL = SERVER+"/oauth/token";
 
 ristoreApp
 .config(function ($httpProvider, $routeProvider) {
@@ -15,12 +16,10 @@ ristoreApp
 	    })
 	    .when('/home', { 
 	    	templateUrl: 'views/home.html',
-			requireLogin: false
 	    })
 		.when('/foundation', {
 			templateUrl: 'views/domains/foundation.html',
 			controller: 'fmCtrl',
-			requireLogin: true
 
 		})
 	    .when('/', {
@@ -40,7 +39,7 @@ ristoreApp
 
 	    $rootScope.$on('$locationChangeStart', function (event, next, current) {
 	        // redirect to login page if not logged in
-	        if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
+	        if ($location.path() !== '/login' && $location.path() !== '/home' && !$rootScope.globals.currentUser && $rootScope.authenticated === false) {
 	            $location.path('/login');
 	        }
 
