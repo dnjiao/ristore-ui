@@ -1,4 +1,4 @@
-var ristoreApp = angular.module('ristoreApp', ['ngRoute', 'ngCookies']);
+var ristoreApp = angular.module('ristoreApp', ['ngRoute', 'ngCookies', 'ngTable']);
 
 //var SERVER = 'http://localhost:8080/ristoreService';
 var SERVER = 'http://rcdrljboss01a:9880/ristoreService'

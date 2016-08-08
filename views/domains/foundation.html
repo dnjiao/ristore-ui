@@ -31,4 +31,16 @@
             </div>
         </div>
     </div>
+    <table ng-table="vm.tableParams" class="table" show-filter="true">
+        <tr ng-repeat="report in data">
+            <td title="'ReportId'" filter="{ reportid: 'text'}" sortable="'reportid'">
+                {{report.reportid}}</td>
+            <td title="'SampleId'" filter="{ sampleid: 'text'}" sortable="'sampleid'">
+                {{report.sampleid}}</td>
+            <td title="'MRN'" filter="{ mrn: 'text'}" sortable="'mrn'">
+                {{report.mrn}}</td>
+            <td title="'Diagnosis'" filter="{ diagnosis: 'text'}" sortable="'diagnosis'">
+                {{report.diagnosis}}</td>
+        </tr>
+    </table>
 </div>
