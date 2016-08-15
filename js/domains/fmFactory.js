@@ -3,12 +3,12 @@
  */
 
 'use strict'
-ristoreApp.factory("fmFactory", ['$http',
-    function ($http) {
+ristoreApp.factory("fmFactory", ['$http', '$window',
+    function ($http, $window) {
         var service = {};
         
         service.getAll = function () {
-            var url = SERVER + "/ristore/foundtion/";
+            var url = SERVER + "/ristore/foundation/";
             return $http({
                 headers: {'Authorization': 'Bearer ' + $window.localStorage.getItem("access_token")},
                 url: url,
