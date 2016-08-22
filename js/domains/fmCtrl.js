@@ -16,7 +16,7 @@ ristoreApp.controller("fmCtrl",
                         return fmFactory.getAll().then(function(response) {
                             var reports = response.data;
                             params.total(reports.length);
-                            console.log(reports.length)
+                            console.log(reports.length);
                             return reports;
                         });
 
