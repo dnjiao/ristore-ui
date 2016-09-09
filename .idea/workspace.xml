@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c20f0957-ffa0-4ae2-a11d-026ad4089912" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/search.css" afterPath="$PROJECT_DIR$/css/search.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/domains/fmCtrl.js" afterPath="$PROJECT_DIR$/js/domains/fmCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/domains/fmFactory.js" afterPath="$PROJECT_DIR$/js/domains/fmFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/domains/foundation.html" afterPath="$PROJECT_DIR$/views/domains/foundation.html" />
     </list>
     <ignored path="ristore-ui.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,18 +30,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
+            <state relative-caret-position="439">
               <caret line="42" column="78" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/common/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -46,18 +40,18 @@
       <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fmCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fmCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/domains/fmCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
+            <state relative-caret-position="330">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -68,18 +62,28 @@
       <file leaf-file-name="foundation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/domains/foundation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="46" column="16" selection-start-line="35" selection-start-column="2" selection-end-line="46" selection-end-column="16" />
+            <state relative-caret-position="471">
+              <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fmFactory.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/search.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fmFactory.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/domains/fmFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="135">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -148,16 +152,16 @@
         <option value="$PROJECT_DIR$/views/common/footer.html" />
         <option value="$PROJECT_DIR$/views/home.html" />
         <option value="$PROJECT_DIR$/css/login.css" />
-        <option value="$PROJECT_DIR$/css/search.css" />
         <option value="$PROJECT_DIR$/js/authentication/authInterceptor.js" />
         <option value="$PROJECT_DIR$/views/common/header.html" />
         <option value="$PROJECT_DIR$/js/authentication/loginFactory.js" />
         <option value="$PROJECT_DIR$/views/login.html" />
         <option value="$PROJECT_DIR$/js/authentication/loginCtrl.js" />
         <option value="$PROJECT_DIR$/js/config.js" />
-        <option value="$PROJECT_DIR$/js/domains/fmFactory.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/search.css" />
         <option value="$PROJECT_DIR$/views/domains/foundation.html" />
+        <option value="$PROJECT_DIR$/js/domains/fmFactory.js" />
         <option value="$PROJECT_DIR$/js/domains/fmCtrl.js" />
       </list>
     </option>
@@ -168,9 +172,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="101" />
-    <option name="y" value="23" />
-    <option name="width" value="1258" />
+    <option name="x" value="1574" />
+    <option name="y" value="121" />
+    <option name="width" value="1184" />
     <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -199,7 +203,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,6 +355,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,18 +448,20 @@
       <workItem from="1466614115051" duration="5350000" />
       <workItem from="1469803921739" duration="11553000" />
       <workItem from="1470149310181" duration="3454000" />
-      <workItem from="1470666504662" duration="11539000" />
+      <workItem from="1470666504662" duration="12240000" />
+      <workItem from="1472441549535" duration="542000" />
+      <workItem from="1472679728353" duration="8730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66442000" />
+    <option name="totallyTimeSpent" value="76415000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="23" width="1258" height="797" extended-state="0" />
+    <frame x="1574" y="121" width="1184" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1963434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20861487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -796,13 +802,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/authentication/navigation.js" />
-    <entry file="file://$PROJECT_DIR$/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/authentication/loginFactoryBase64.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -815,6 +814,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/authentication/loginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -836,56 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="42" column="78" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/common/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/domains/foundation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="46" column="16" selection-start-line="35" selection-start-column="2" selection-end-line="46" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/domains/fmCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/authentication/loginCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/authentication/loginFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
@@ -894,10 +859,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="42" column="78" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/domains/foundation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/domains/fmFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/domains/fmCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>

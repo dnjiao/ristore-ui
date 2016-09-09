@@ -11,13 +11,26 @@ ristoreApp.controller("fmCtrl",
                 self.tableParams = new NgTableParams({
                     page: 1,            // show first page
                     count: 10,          // count per page
+                    sorting: {
+                        frReportId: 'asc'
+                    }
                 }, {
+                    total: 0,
                     getData: function (params) {
-                        return fmFactory.getAll().then(function(response) {
-                            var reports = response.data;
-                            params.total(reports.length);
-                            console.log(reports.length);
-                            return reports;
+                        var sorting = params.sorting();
+                        var orderBy;
+                        var direction;
+                        $.each(sorting, function(k, v) {
+                            orderBy = k;
+                            direction = v;
+                        });
+                        
+                        return fmFactory.getAll(params.page(), params.count(), orderBy, direction)
+                            .then(function(response) {
+                                var reports = response.data;
+                                params.total(reports.length);
+                                console.log(reports.length);
+                                return reports;
                         });
 
                     }

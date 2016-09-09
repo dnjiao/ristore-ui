@@ -32,17 +32,23 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <table ng-table="fm.tableParams" class="table" show-filter="false">
             <tr ng-repeat="report in $data">
-                <td title="'ReportId'" sortable="'reportId'" class="text-center">
-                    {{report.reportId}}</td>
-                <td title="'SampleId'" sortable="'sampleId'" class="text-center">
-                    {{report.sampleId}}</td>
-                <td title="'MRN'" sortable="'mrn'" class="text-center">
+                <td title="'ReportId'" filter="{frReportId: 'text'}" sortable="'frReportId'" class="text-center">
+                    {{report.frReportId}}</td>
+                <td title="'BlockId'" filter="{frBlockId: 'text'}" sortable="'frBlockId'" class="text-center">
+                    {{report.frBlockId}}</td>
+                <td title="'MRN'" filter="{mrn: 'text'}" sortable="'mrn'" class="text-center">
                     {{report.mrn}}</td>
-                <td title="'Diagnosis'" sortable="'diagnosis'" class="text-center">
-                    {{report.diagnosis}}</td>
+                <td title="'Name'" filter="{frFullName: 'text'}" sortable="'frFullName'" class="text-center">
+                    {{report.frFullName}}</td>
+                <td title="'Diagnosis'" filter="{frDiagnosis: 'text'}" sortable="'frDiagnosis'" class="text-center">
+                    {{report.frDiagnosis}}</td>
+                <td title="'File'" filter="{filepath: 'text'}" sortable="'filepath'" class="text-center">
+                    {{report.filepath}}</td>
+
             </tr>
         </table>
     </div>
