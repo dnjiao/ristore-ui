@@ -34,20 +34,20 @@
     </div>
 
     <div class="container">
-        <table ng-table="fm.tableParams" class="table" show-filter="false">
+        <table ng-table="fm.tableParams" class="table table-bordered table-striped table-condensed" show-filter="false">
             <tr ng-repeat="report in $data">
-                <td title="'ReportId'" filter="{frReportId: 'text'}" sortable="'frReportId'" class="text-center">
+                <td data-title="'ReportId'" filter="{frReportId: 'text'}" sortable="'frReportId'" class="text-center">
                     {{report.frReportId}}</td>
-                <td title="'BlockId'" filter="{frBlockId: 'text'}" sortable="'frBlockId'" class="text-center">
+                <td data-title="'BlockId'" filter="{frBlockId: 'text'}" sortable="'frBlockId'" class="text-center">
                     {{report.frBlockId}}</td>
-                <td title="'MRN'" filter="{mrn: 'text'}" sortable="'mrn'" class="text-center">
+                <td data-title="'MRN'" filter="{mrn: 'text'}" sortable="'mrn'" class="text-center">
                     {{report.mrn}}</td>
-                <td title="'Name'" filter="{frFullName: 'text'}" sortable="'frFullName'" class="text-center">
+                <td data-title="'Name'" filter="{frFullName: 'text'}" sortable="'frFullName'" class="text-center">
                     {{report.frFullName}}</td>
-                <td title="'Diagnosis'" filter="{frDiagnosis: 'text'}" sortable="'frDiagnosis'" class="text-center">
+                <td data-title="'Diagnosis'" filter="{frDiagnosis: 'text'}" sortable="'frDiagnosis'" class="text-center">
                     {{report.frDiagnosis}}</td>
-                <td title="'File'" filter="{filepath: 'text'}" sortable="'filepath'" class="text-center">
-                    {{report.filepath}}</td>
+                <td data-title="'File'" class="text-center"><a ng-href="#/{{report.frReportId}}">{{report.frReportId}}.xml</a>
+                    </td>
 
             </tr>
         </table>

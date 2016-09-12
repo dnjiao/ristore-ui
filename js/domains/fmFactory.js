@@ -7,7 +7,11 @@ ristoreApp.factory("fmFactory", ['$http', '$window',
     function ($http, $window) {
         var service = {};
         
-        service.getAll = function (page, count, orderBy, direction) {
+        service.getAll = function () {
+            var page = 1;
+            var count = 200;
+            var orderBy = "frReportId";
+            var direction = "asc";
             var url = SERVER + "/ristore/foundation?page=" + page + "&size=" + count +"&sort=" + orderBy + "," + direction;
             return $http({
                 headers: {'Authorization': 'Bearer ' + $window.localStorage.getItem("access_token")},

@@ -15,27 +15,27 @@ ristoreApp.controller("fmCtrl",
                         frReportId: 'asc'
                     }
                 }, {
-                    total: 0,
+                    total: $scope.data.length,
                     getData: function (params) {
-                        var sorting = params.sorting();
-                        var orderBy;
-                        var direction;
-                        $.each(sorting, function(k, v) {
-                            orderBy = k;
-                            direction = v;
-                        });
+                        // var sorting = params.sorting();
+                        // var orderBy;
+                        // var direction;
+                        // $.each(sorting, function(k, v) {
+                        //     orderBy = k;
+                        //     direction = v;
+                        // });
                         
-                        return fmFactory.getAll(params.page(), params.count(), orderBy, direction)
+//                        return fmFactory.getAll(params.page(), params.count(), orderBy, direction)
+                        return fmFactory.getAll()
                             .then(function(response) {
                                 var reports = response.data;
                                 params.total(reports.length);
                                 console.log(reports.length);
                                 return reports;
                         });
-
                     }
                 });
-                self.tableParams.reload();
+                $scope.tableParams.reload();
             }
         }
     }]
