@@ -15,7 +15,6 @@ ristoreApp.controller("fmCtrl",
                         frReportId: 'asc'
                     }
                 }, {
-                    total: $scope.data.length,
                     getData: function (params) {
                         // var sorting = params.sorting();
                         // var orderBy;
@@ -30,12 +29,12 @@ ristoreApp.controller("fmCtrl",
                             .then(function(response) {
                                 var reports = response.data;
                                 params.total(reports.length);
-                                console.log(reports.length);
-                                return reports;
+                                console.log(params.total());
+                                return reports.slice((params.page() - 1) * params.count(), params.page() * params.count());
                         });
                     }
                 });
-                $scope.tableParams.reload();
+                self.tableParams.reload();
             }
         }
     }]
