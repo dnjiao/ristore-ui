@@ -8,11 +8,8 @@ ristoreApp.factory("fmFactory", ['$http', '$window',
         var service = {};
         
         service.getAll = function () {
-            var page = 1;
-            var count = 200;
-            var orderBy = "frReportId";
-            var direction = "asc";
-            var url = SERVER + "/ristore/foundation?page=" + page + "&size=" + count +"&sort=" + orderBy + "," + direction;
+            console.log("Ajax call");
+            var url = SERVER + "/ristore/foundation/";
             return $http({
                 headers: {'Authorization': 'Bearer ' + $window.localStorage.getItem("access_token")},
                 url: url,

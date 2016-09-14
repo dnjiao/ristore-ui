@@ -1,5 +1,32 @@
 <div ng-controller="fmCtrl as fm">
     <div class="container">
+        <div class="row">
+            <br /><br />
+            <form id="togglingForm" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-xs-9">
+                        <input type="text" class="form-control" name="company"
+                               required data-fv-notempty-message="The company name is required" /> <br />
+
+                        <label class="radio-inline">Search Reports </label>  
+                        <label class="radio-inline">
+                            <input type="radio" value="" checked='checked' /> ALL
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="terrible" /> by MRN
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="terrible" /> by Report ID
+                        </label>
+                    </div>
+                    <div class="col-xs-2">
+                        <button type="button" class="btn btn-success" data-toggle="#jobInfo">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
         <div class="row top-margin-80">
             <div class="col-md-12">
                 <div class="input-group" id="adv-search">
@@ -46,7 +73,7 @@
                     {{report.frFullName}}</td>
                 <td data-title="'Diagnosis'" filter="{frDiagnosis: 'text'}" sortable="'frDiagnosis'" class="text-center">
                     {{report.frDiagnosis}}</td>
-                <td data-title="'File'" class="text-center"><a ng-href="#/{{report.frReportId}}">{{report.frReportId}}.xml</a>
+                <td data-title="'File'" class="text-center"><a ng-href="{{report.filepath}}">{{report.frReportId}}.xml</a>
                     </td>
 
             </tr>
