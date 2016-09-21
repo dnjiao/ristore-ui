@@ -8,13 +8,43 @@ ristoreApp.factory("fmFactory", ['$http', '$window',
         var service = {};
         
         service.getAll = function () {
-            console.log("Ajax call");
             var url = SERVER + "/ristore/foundation/";
             return $http({
                 headers: {'Authorization': 'Bearer ' + $window.localStorage.getItem("access_token")},
                 url: url,
                 method: 'GET',
                 crossOrigin: true
+            })
+        }
+
+        service.getByMrn = function (mrn) {
+            var url = SERVER + "/ristore/foundation/mrn/" + mrn;
+            return $http({
+                headers: {'Authorization': 'Bearer ' + $window.localStorage.getItem("access_token")},
+                url: url,
+                method: 'GET',
+                crossOrigin: true
+            })
+        }
+
+        service.getByReportId = function (reportid) {
+            var url = SERVER + "/ristore/foundation/reportid/" + reportid;
+            return $http({
+                headers: {'Authorization': 'Bearer ' + $window.localStorage.getItem("access_token")},
+                url: url,
+                method: 'GET',
+                crossOrigin: true
+            })
+        }
+
+        service.getXMLFile = function (filename) {
+            var url = SERVER + "/ristore/foundation/xml/" + filename;
+            return $http({
+                headers: {'Authorization': 'Bearer ' + $window.localStorage.getItem("access_token")},
+                url: url,
+                method: 'GET',
+                crossOrigin: true,
+                responseType: 'arraybuffer'
             })
         }
 

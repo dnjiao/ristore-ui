@@ -5,29 +5,33 @@ var SERVER = 'http://rcdrljboss01a:9880/ristoreService'
 var LOGIN_URL = SERVER+"/oauth/token";
 
 ristoreApp
-.config(function ($httpProvider, $routeProvider) {
+.config(
+	function ($httpProvider, $routeProvider) {
 
-	$httpProvider.interceptors.push('authInterceptor');
+		$httpProvider.interceptors.push('authInterceptor');
 
-  	$routeProvider
-	    .when('/login', { 
-	    	templateUrl: 'views/login.html', 
-	    	controller: 'loginCtrl' 
-	    })
-	    .when('/home', { 
-	    	templateUrl: 'views/home.html',
-	    })
-		.when('/foundation', {
-			templateUrl: 'views/domains/foundation.html',
-			controller: 'fmCtrl',
+		$routeProvider
+			.when('/login', {
+				templateUrl: 'views/login.html',
+				controller: 'loginCtrl'
+			})
+			.when('/home', {
+				templateUrl: 'views/home.html',
+			})
+			.when('/foundation', {
+				templateUrl: 'views/domains/foundation.html',
+				controller: 'fmCtrl',
 
-		})
-	    .when('/', {
-	    	redirectTo: '/login'
-	    });
+			})
+			.when('/', {
+				redirectTo: '/login'
+			});
 
-//	$locationProvider.html5Mode(true);
-})
+	//	$locationProvider.html5Mode(true);
+	},
+	function ($compileProvider) {
+		$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/);
+	})
 
 .run(['$rootScope', '$location', '$cookieStore', '$http',
 	function ($rootScope, $location, $cookieStore, $http) {

@@ -4,64 +4,31 @@
             <br /><br />
             <form id="togglingForm" method="post" class="form-horizontal">
                 <div class="form-group">
-                    <div class="col-xs-9">
-                        <input type="text" class="form-control" name="company"
-                               required data-fv-notempty-message="The company name is required" /> <br />
+                    <div class="col-xs-9" ng-init="selection='all'">
+                        <input type="text" class="form-control" ng-model="keyword"
+                                placeholder="Enter MRN or report ID" ng-disabled="selection == 'all'" /> <br />
 
                         <label class="radio-inline">Search Reports </label>  
                         <label class="radio-inline">
-                            <input type="radio" value="" checked='checked' /> ALL
+                            <input type="radio" ng-model="selection" value="all" name="searchBy"/> ALL
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" value="terrible" /> by MRN
+                            <input type="radio" ng-model="selection" value="mrn" name="searchBy"/> by MRN
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" value="terrible" /> by Report ID
+                            <input type="radio" ng-model="selection" value="reportid" name="searchBy"/> by Report ID
                         </label>
+                        <br /><br />
                     </div>
-                    <div class="col-xs-2">
-                        <button type="button" class="btn btn-success" data-toggle="#jobInfo">Search</button>
-                    </div>
+                    <button type="button" class="btn btn-primary" ng-click="fmSearch()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </div>
             </form>
         </div>
     </div>
-    <div class="container">
-        <div class="row top-margin-80">
-            <div class="col-md-12">
-                <div class="input-group" id="adv-search">
-                    <input type="text" class="form-control" ng-model="keyword" placeholder="Enter MRN or report ID" />
-                    <div class="input-group-btn">
-                        <div class="btn-group" role="group">
-                            <div class="dropdown dropdown-lg">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                                <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                    <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <label for="filter">Search by</label>
-                                            <select class="form-control" ng-model="selection">
-                                                <option value="0" selected>All Reports</option>
-                                                <option value="1" >MRN</option>
-                                                <option value="2">ReportID</option>
-
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" ng-model="optionword" ng-hide="selection == '0'"/>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-primary" ng-click="fmSearch()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="container">
-        <table ng-table="fm.tableParams" class="table table-bordered table-striped table-condensed" show-filter="false">
+        <span ng-show="showTable"> Total <code>{{length}}</code> reports found. </span>
+        <table ng-table="fm.tableParams" class="table table-bordered table-striped table-condensed" show-filter="false" ng-show="showTable">
             <tr ng-repeat="report in $data">
                 <td data-title="'ReportId'" filter="{frReportId: 'text'}" sortable="'frReportId'" class="text-center">
                     {{report.frReportId}}</td>
@@ -73,9 +40,14 @@
                     {{report.frFullName}}</td>
                 <td data-title="'Diagnosis'" filter="{frDiagnosis: 'text'}" sortable="'frDiagnosis'" class="text-center">
                     {{report.frDiagnosis}}</td>
-                <td data-title="'File'" class="text-center"><a ng-href="{{report.filepath}}">{{report.frReportId}}.xml</a>
-                    </td>
+                <td data-title="'File'" class="text-center">
 
+                    <a href="">
+                        <span class="glyphicon glyphicon-download-alt" ng-click="downloadXML(report.filename)" ></span></a>
+                    <a href="">
+                        <span class="glyphicon glyphicon-eye-open" ng-click="viewXML(report.filename)"></span>
+                    </a>
+                </td>
             </tr>
         </table>
     </div>
