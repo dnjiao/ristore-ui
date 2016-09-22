@@ -2,12 +2,13 @@
  * Created by djiao on 5/6/16.
  */
 
-ristoreApp.controller("fmCtrl",
+ristoreApp
+    .controller("fmCtrl",
     ['$scope', '$filter', '$window', '$sce', 'fmFactory', 'NgTableParams', function($scope, $filter, $window, $sce, fmFactory, NgTableParams) {
         var self = this;
         $scope.showTable = false;
         $scope.fmSearch = function () {
-            
+            $scope.myLoading = true;
             var ajax;
             switch ($scope.selection) {
                 case "all":
@@ -29,11 +30,13 @@ ristoreApp.controller("fmCtrl",
             }, {
                 getData: function (params) {
                     return ajax.then(function(response) {
+                        $scope.myLoading = false;
                         var reports = response.data;
                         params.total(reports.length);
                         $scope.length = reports.length;
                         var sorted = params.sorting() ? $filter('orderBy')(reports, params.orderBy()) : reports;
                         $scope.showTable = true;
+                        $scope.myLoading = false;
                         return sorted.slice((params.page() - 1) * params.count(), params.page() * params.count());
                     });
                 }
@@ -63,3 +66,18 @@ ristoreApp.controller("fmCtrl",
         }
     }]
 )
+.directive('myLoading', function () {
+    return {
+        restrict: 'E',
+        replace:true,
+        template: '<p style="text-align:center;"><img src="../images/spin.gif" width="80" height="80" align="middle" />LOADING...</p>',
+        link: function (scope, element, attr) {
+            scope.$watch('myLoading', function (val) {
+                if (val)
+                    $(element).show();
+                else
+                    $(element).hide();
+            });
+        }
+    }
+})
